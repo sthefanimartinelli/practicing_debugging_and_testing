@@ -24,7 +24,7 @@ def test_show_file_details(capsys):
     assert "Last modified date: 2023-01-01" in captured.out
 
 
-def test_show_details_without_directory(capsys):
+def test_show_details_with_directory(capsys):
     context = {"base_path": "/home/trybe/Downloads"}
 
     with patch("os.path.exists", return_value=True), patch(
